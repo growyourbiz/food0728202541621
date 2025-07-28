@@ -1,0 +1,262 @@
+/* Import Google Font - Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #A93226; /* Dark Red from your logo */
+    --secondary-color: #F4D03F; /* Yellowish color for accent */
+    --text-color: #333;
+    --light-grey: #f4f4f4;
+    --dark-grey: #666;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-grey);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically on small screens */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Space between logo and nav on small screens */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow nav items to wrap on small screens */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Main Content */
+.menu-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center;
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+    padding-top: 20px; /* Add padding to account for sticky header */
+}
+
+.menu-category h4 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.item-info {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.item-info h5 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+    font-style: italic;
+}
+
+.price {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust spacing */
+    }
+
+    .menu-container {
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .menu-category h4 {
+        font-size: 1.6rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .menu-item img {
+        height: 180px; /* Slightly smaller image height */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    nav ul li a {
+        font-size: 1rem;
+    }
+    .price {
+        font-size: 1.2rem;
+    }
+    footer {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
