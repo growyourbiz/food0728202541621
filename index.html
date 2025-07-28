@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BORCELLE RESTAURANT - เมนูอาหาร</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/borcelle-logo.png" alt="BORCELLE RESTAURANT Logo">
+            <img src="https://via.placeholder.com/150x50?text=BORCELLE+LOGO" alt="BORCELLE RESTAURANT Logo">
             <h1>BORCELLE RESTAURANT</h1>
         </div>
-        <nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#featured-menu">เมนูแนะนำ</a></li>
                 <li><a href="#single-dish">อาหารจานเดียว</a></li>
@@ -31,84 +36,84 @@
             <h4>เมนูแนะนำ</h4>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1040/300/200" alt="ผัดพริกหยวกหมู">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,stir-fry,pork" alt="ผัดพริกหยวกหมู" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดพริกหยวกหมู</h5>
-                        <p>Stir-fried pork with peppers</p>
+                        <p class="description">Stir-fried pork with peppers</p>
                     </div>
-                    <div class="price">40.-</div>
+                    <div class="price-text">40.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1043/300/200" alt="ผัดกระเพรา">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,basil,chicken" alt="ผัดกระเพรา" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดกระเพรา</h5>
-                        <p>Stir-fried Basil with fried egg</p>
+                        <p class="description">Stir-fried Basil with fried egg</p>
                     </div>
-                    <div class="price">50.-</div>
+                    <div class="price-text">50.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1051/300/200" alt="ผัดพริกขิงกุ้ง">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,shrimp,ginger" alt="ผัดพริกขิงกุ้ง" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดพริกขิงกุ้ง</h5>
-                        <p>Chilli Prawn Stir-fry</p>
+                        <p class="description">Chilli Prawn Stir-fry</p>
                     </div>
-                    <div class="price">40.-</div>
+                    <div class="price-text">40.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1062/300/200" alt="ผัดไทยกุ้งสด">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,pad-thai,shrimp" alt="ผัดไทยกุ้งสด" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดไทยกุ้งสด</h5>
-                        <p>Shrimp Pad Thai Noodles</p>
+                        <p class="description">Shrimp Pad Thai Noodles</p>
                     </div>
-                    <div class="price">65.-</div>
+                    <div class="price-text">65.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1063/300/200" alt="แกงเผ็ดไก่">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,chicken-curry" alt="แกงเผ็ดไก่" loading="lazy">
                     <div class="item-info">
                         <h5>แกงเผ็ดไก่</h5>
-                        <p>Chicken Curry</p>
+                        <p class="description">Chicken Curry</p>
                     </div>
-                    <div class="price">40.-</div>
+                    <div class="price-text">40.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1064/300/200" alt="ผัดหน่อไม้ฝรั่ง">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,asparagus,pork" alt="ผัดหน่อไม้ฝรั่ง" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดหน่อไม้ฝรั่ง</h5>
-                        <p>Stir-fried Asparagus with Pork</p>
+                        <p class="description">Stir-fried Asparagus with Pork</p>
                     </div>
-                    <div class="price">55.-</div>
+                    <div class="price-text">55.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1065/300/200" alt="แกงมัสมั่นไก่">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,massaman-curry,chicken" alt="แกงมัสมั่นไก่" loading="lazy">
                     <div class="item-info">
                         <h5>แกงมัสมั่นไก่</h5>
-                        <p>Chicken Massaman Curry</p>
+                        <p class="description">Chicken Massaman Curry</p>
                     </div>
-                    <div class="price">70.-</div>
+                    <div class="price-text">70.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1066/300/200" alt="แกงฮังเล">
+                    <img src="https://source.unsplash.com/300x300/?thai-food,northern-curry,pork" alt="แกงฮังเล" loading="lazy">
                     <div class="item-info">
                         <h5>แกงฮังเล</h5>
-                        <p>Northern Style Pork Curry</p>
+                        <p class="description">Northern Style Pork Curry</p>
                     </div>
-                    <div class="price">50.-</div>
+                    <div class="price-text">50.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/1067/300/200" alt="สลัดอกไก่">
+                    <img src="https://source.unsplash.com/300x300/?chicken-salad,healthy-food" alt="สลัดอกไก่" loading="lazy">
                     <div class="item-info">
                         <h5>สลัดอกไก่</h5>
-                        <p>Grilled Chicken Salad</p>
+                        <p class="description">Grilled Chicken Salad</p>
                     </div>
-                    <div class="price">60.-</div>
+                    <div class="price-text">60.-</div>
                 </div>
             </div>
         </section>
@@ -117,47 +122,47 @@
             <h4>อาหารจานเดียว</h4>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/237/300/200" alt="ข้าวผัด">
+                    <img src="https://source.unsplash.com/300x300/?fried-rice,thai-food" alt="ข้าวผัด" loading="lazy">
                     <div class="item-info">
                         <h5>ข้าวผัด</h5>
-                        <p>Fried Rice</p>
+                        <p class="description">Fried Rice</p>
                     </div>
-                    <div class="price">45.-</div>
+                    <div class="price-text">45.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/238/300/200" alt="ผัดซีอิ๊ว">
+                    <img src="https://source.unsplash.com/300x300/?pad-see-ew,thai-noodles" alt="ผัดซีอิ๊ว" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดซีอิ๊ว</h5>
-                        <p>Stir-fried Noodles with Soy Sauce</p>
+                        <p class="description">Stir-fried Noodles with Soy Sauce</p>
                     </div>
-                    <div class="price">50.-</div>
+                    <div class="price-text">50.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/239/300/200" alt="ราดหน้า">
+                    <img src="https://source.unsplash.com/300x300/?rad-na,thai-noodles" alt="ราดหน้า" loading="lazy">
                     <div class="item-info">
                         <h5>ราดหน้า</h5>
-                        <p>Noodles in Gravy Sauce</p>
+                        <p class="description">Noodles in Gravy Sauce</p>
                     </div>
-                    <div class="price">50.-</div>
+                    <div class="price-text">50.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/240/300/200" alt="ก๋วยเตี๋ยวคั่วไก่">
+                    <img src="https://source.unsplash.com/300x300/?guay-tiew-khua-gai" alt="ก๋วยเตี๋ยวคั่วไก่" loading="lazy">
                     <div class="item-info">
                         <h5>ก๋วยเตี๋ยวคั่วไก่</h5>
-                        <p>Stir-fried Noodles with Chicken</p>
+                        <p class="description">Stir-fried Noodles with Chicken</p>
                     </div>
-                    <div class="price">55.-</div>
+                    <div class="price-text">55.-</div>
                 </div>
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/241/300/200" alt="ผัดมักกะโรนี">
+                    <img src="https://source.unsplash.com/300x300/?stir-fried-macaroni" alt="ผัดมักกะโรนี" loading="lazy">
                     <div class="item-info">
                         <h5>ผัดมักกะโรนี</h5>
-                        <p>Stir-fried Macaroni</p>
+                        <p class="description">Stir-fried Macaroni</p>
                     </div>
-                    <div class="price">60.-</div>
+                    <div class="price-text">60.-</div>
                 </div>
             </div>
         </section>
@@ -166,47 +171,47 @@
             <h4>แกงและต้มยำ</h4>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/242/300/200" alt="ต้มยำกุ้ง">
+                    <img src="https://source.unsplash.com/300x300/?tom-yum-goong,thai-soup" alt="ต้มยำกุ้ง" loading="lazy">
                     <div class="item-info">
                         <h5>ต้มยำกุ้ง</h5>
-                        <p>Tom Yum Goong (Spicy Shrimp Soup)</p>
+                        <p class="description">Tom Yum Goong (Spicy Shrimp Soup)</p>
                     </div>
-                    <div class="price">80.-</div>
+                    <div class="price-text">80.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/243/300/200" alt="แกงเขียวหวานไก่">
+                    <img src="https://source.unsplash.com/300x300/?green-curry,thai-food" alt="แกงเขียวหวานไก่" loading="lazy">
                     <div class="item-info">
                         <h5>แกงเขียวหวานไก่</h5>
-                        <p>Green Curry Chicken</p>
+                        <p class="description">Green Curry Chicken</p>
                     </div>
-                    <div class="price">60.-</div>
+                    <div class="price-text">60.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/244/300/200" alt="ต้มข่าไก่">
+                    <img src="https://source.unsplash.com/300x300/?tom-kha-gai,chicken-soup" alt="ต้มข่าไก่" loading="lazy">
                     <div class="item-info">
                         <h5>ต้มข่าไก่</h5>
-                        <p>Tom Kha Gai (Chicken Coconut Soup)</p>
+                        <p class="description">Tom Kha Gai (Chicken Coconut Soup)</p>
                     </div>
-                    <div class="price">70.-</div>
+                    <div class="price-text">70.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/245/300/200" alt="แกงป่า">
+                    <img src="https://source.unsplash.com/300x300/?jungle-curry,thai-food" alt="แกงป่า" loading="lazy">
                     <div class="item-info">
                         <h5>แกงป่า</h5>
-                        <p>Jungle Curry</p>
+                        <p class="description">Jungle Curry</p>
                     </div>
-                    <div class="price">75.-</div>
+                    <div class="price-text">75.-</div>
                 </div>
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/246/300/200" alt="แกงส้ม">
+                    <img src="https://source.unsplash.com/300x300/?sour-curry,thai-food" alt="แกงส้ม" loading="lazy">
                     <div class="item-info">
                         <h5>แกงส้ม</h5>
-                        <p>Sour Curry</p>
+                        <p class="description">Sour Curry</p>
                     </div>
-                    <div class="price">65.-</div>
+                    <div class="price-text">65.-</div>
                 </div>
             </div>
         </section>
@@ -215,47 +220,47 @@
             <h4>สลัดและของว่าง</h4>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/247/300/200" alt="สลัดผักรวม">
+                    <img src="https://source.unsplash.com/300x300/?vegetable-salad,healthy-food" alt="สลัดผักรวม" loading="lazy">
                     <div class="item-info">
                         <h5>สลัดผักรวม</h5>
-                        <p>Mixed Vegetable Salad</p>
+                        <p class="description">Mixed Vegetable Salad</p>
                     </div>
-                    <div class="price">50.-</div>
+                    <div class="price-text">50.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/248/300/200" alt="ปอเปี๊ยะทอด">
+                    <img src="https://source.unsplash.com/300x300/?spring-rolls,fried-food" alt="ปอเปี๊ยะทอด" loading="lazy">
                     <div class="item-info">
                         <h5>ปอเปี๊ยะทอด</h5>
-                        <p>Fried Spring Rolls</p>
+                        <p class="description">Fried Spring Rolls</p>
                     </div>
-                    <div class="price">45.-</div>
+                    <div class="price-text">45.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/249/300/200" alt="ไก่ทอด">
+                    <img src="https://source.unsplash.com/300x300/?fried-chicken,food" alt="ไก่ทอด" loading="lazy">
                     <div class="item-info">
                         <h5>ไก่ทอด</h5>
-                        <p>Fried Chicken</p>
+                        <p class="description">Fried Chicken</p>
                     </div>
-                    <div class="price">60.-</div>
+                    <div class="price-text">60.-</div>
                 </div>
 
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/250/300/200" alt="เฟรนช์ฟรายส์">
+                    <img src="https://source.unsplash.com/300x300/?french-fries,snack" alt="เฟรนช์ฟรายส์" loading="lazy">
                     <div class="item-info">
                         <h5>เฟรนช์ฟรายส์</h5>
-                        <p>French Fries</p>
+                        <p class="description">French Fries</p>
                     </div>
-                    <div class="price">40.-</div>
+                    <div class="price-text">40.-</div>
                 </div>
                 <div class="menu-item">
-                    <img src="https://picsum.photos/id/251/300/200" alt="ขนมปังกระเทียม">
+                    <img src="https://source.unsplash.com/300x300/?garlic-bread,appetizer" alt="ขนมปังกระเทียม" loading="lazy">
                     <div class="item-info">
                         <h5>ขนมปังกระเทียม</h5>
-                        <p>Garlic Bread</p>
+                        <p class="description">Garlic Bread</p>
                     </div>
-                    <div class="price">35.-</div>
+                    <div class="price-text">35.-</div>
                 </div>
             </div>
         </section>
@@ -267,5 +272,6 @@
             <p>&#x1F4CD; 123 Anywhere St., Any City</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
