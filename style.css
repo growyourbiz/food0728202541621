@@ -26,11 +26,11 @@ header {
     color: var(--white);
     padding: 1rem 2rem;
     display: flex;
-    flex-direction: column; /* Stack logo and nav vertically on small screens */
+    flex-direction: row; /* Default: Horizontal layout for desktop */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out logo and nav */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky; /* Make header sticky */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -38,7 +38,6 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem; /* Space between logo and nav on small screens */
 }
 
 .logo img {
@@ -52,12 +51,13 @@ header {
     font-weight: 600;
 }
 
+/* Desktop Navigation */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Allow nav items to wrap on small screens */
+    display: flex; /* Display as flex for horizontal menu */
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
     justify-content: center;
 }
 
@@ -78,6 +78,36 @@ nav ul li a:hover,
 nav ul li a.active {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's above other elements */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Menu Animation (to X) */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 /* Main Content */
@@ -127,7 +157,8 @@ h3 {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Adjusted minmax to accommodate 1:1 ratio better */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     justify-content: center;
 }
@@ -150,38 +181,42 @@ h3 {
 
 .menu-item img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    height: auto; /* Allow height to adjust */
+    aspect-ratio: 1 / 1; /* Enforce 1:1 aspect ratio */
     object-fit: cover; /* Cover the area, cropping if necessary */
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 1px solid var(--light-grey); /* Optional separator */
 }
 
 .item-info {
-    padding: 15px;
+    padding: 10px; /* Reduced padding */
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
 }
 
 .item-info h5 {
-    margin: 0 0 5px 0;
-    font-size: 1.3rem;
+    margin: 0; /* Remove default margin */
+    font-size: 1.1rem; /* Adjust font size for readability */
     color: var(--primary-color);
     font-weight: 600;
+    line-height: 1.2; /* Improve line height for longer names */
 }
 
-.item-info p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--dark-grey);
-    font-style: italic;
+.item-info .description {
+    display: none; /* Hide the italic description if not needed for this layout */
 }
 
-.price {
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 1.4rem;
+.price-text {
+    background-color: var(--white);
+    color: var(--primary-color); /* Red color for price */
+    font-size: 1.2rem; /* Adjusted font size for price */
     font-weight: 700;
     padding: 10px 15px;
-    border-radius: 0 0 10px 10px;
+    text-align: center;
+    border-top: 1px solid var(--light-grey); /* Optional separator */
 }
+
 
 /* Footer Styles */
 footer {
@@ -197,24 +232,64 @@ footer {
     margin: 5px 0;
 }
 
-/* Responsive Design */
+/* Responsive Design (Mobile & Tablet) */
 @media (max-width: 768px) {
     header {
-        padding: 1rem;
+        flex-direction: row; /* Keep logo and hamburger side-by-side */
+        justify-content: space-between; /* Push logo to left, hamburger to right */
+        align-items: center;
+        padding: 1rem 1.5rem;
     }
 
-    .logo h1 {
-        font-size: 1.5rem;
+    .logo {
+        margin-bottom: 0; /* Remove margin from logo */
+    }
+
+    /* Show hamburger menu on small screens */
+    .hamburger-menu {
+        display: flex; /* Show hamburger */
+    }
+
+    /* Hide desktop navigation */
+    nav {
+        display: none; /* Hide nav by default on small screens */
+        position: absolute;
+        top: 80px; /* Position below header (adjust if header height changes) */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0; /* Hidden by default */
+        transition: max-height 0.4s ease-in-out; /* Smooth transition for opening/closing */
+    }
+
+    nav.open {
+        display: flex; /* Show nav when 'open' class is added */
+        max-height: 300px; /* Adjust as needed to fit all menu items */
     }
 
     nav ul {
         flex-direction: column; /* Stack nav items vertically */
-        align-items: center;
-        margin-top: 1rem;
+        padding: 20px 0; /* Add padding for aesthetics */
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust spacing */
+        margin: 10px 0; /* Adjust spacing for vertical menu */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        display: block; /* Make links take full width */
+    }
+
+    /* Reset active state for mobile, consider highlighting current section via JS if needed */
+    nav ul li a.active {
+        border-bottom: none;
+        color: var(--secondary-color);
     }
 
     .menu-container {
@@ -238,7 +313,7 @@ footer {
     }
 
     .menu-item img {
-        height: 180px; /* Slightly smaller image height */
+        height: auto; /* Let aspect-ratio handle height */
     }
 }
 
@@ -249,11 +324,8 @@ footer {
     .logo h1 {
         font-size: 1.3rem;
     }
-    nav ul li a {
-        font-size: 1rem;
-    }
-    .price {
-        font-size: 1.2rem;
+    .price-text {
+        font-size: 1.1rem;
     }
     footer {
         font-size: 1rem;
